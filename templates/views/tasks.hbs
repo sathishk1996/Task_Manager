@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Tasks</title>
+    <script src="/js/jquery-3.6.1.js"></script>
+    <script src="/js/tasks.js"></script>
+    <link rel="stylesheet" href="/css/tasks.css">
+</head>
+<body>
+    <h1>Tasks</h1>
+    <br>
+    <div>
+           <a href="/user">Users</a>
+           <a href="/tasks">Tasks</a>
+        </div>
+        <br>
+        <br>
+        <div id="divBtn">
+        <button class="cornerBtn" id="addBtn">Add</button>
+        <button class="cornerBtn" id="editBtn">Edit</button>
+        <button class="cornerBtn">Delete</button>
+        </div>
+        <br>
+    <table id="task">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Task</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Reading</td>
+                <td>Completed</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Writing</td>
+                <td>InCompleted</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Playing</td>
+                <td>InCompleted</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
