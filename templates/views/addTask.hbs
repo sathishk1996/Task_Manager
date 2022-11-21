@@ -15,21 +15,21 @@
     <br>
     <form id="taskForm">
         <label>Task</label>
-        <input type="text">
+        <input type="text" id="task">
         <br>
         <br>
         <label>Status</label>
-        <select>
-            <option>Complete</option>
-            <option>InComplete</option>
+        <select id="status">
+            <option value="complete">Complete</option>
+            <option value="Incomplete">InComplete</option>
         </select>
         <br>
         <br>
         <label>Owner</label>
-        <select>
-            <option>Arun</option>
-            <option>Ram</option>
-            <option>dani</option>
+        <select id="ownerId">
+            {{#each id_result}}
+                <option value="{{this._id}}">{{this.name}}</option>
+            {{/each}}
         </select>
         <br>
         <br>

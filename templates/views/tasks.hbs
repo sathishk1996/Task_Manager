@@ -21,7 +21,7 @@
         <div id="divBtn">
         <button class="cornerBtn" id="addBtn">Add</button>
         <button class="cornerBtn" id="editBtn">Edit</button>
-        <button class="cornerBtn">Delete</button>
+        <button class="cornerBtn" id="deleteBtn">Delete</button>
         </div>
         <br>
     <table id="task">
@@ -34,24 +34,14 @@
             </tr>
         </thead>
         <tbody>
+            {{#each taskArr}}
             <tr>
-                <td><input type="checkbox"></td>
-                <td>Reading</td>
-                <td>Completed</td>
-                <td>Arun</td>
+                <td><input type="checkbox" id="{{this._id}}"></td>
+                    <td>{{this.task}}</td>
+                    <td>{{this.status}}</td>
+                    <td>{{this.owner_id}}</td>
             </tr>
-            <tr>
-                <td><input type="checkbox"></td>
-                <td>Writing</td>
-                <td>InCompleted</td>
-                <td>ram</td>
-            </tr>
-            <tr>
-                <td><input type="checkbox"></td>
-                <td>Playing</td>
-                <td>InCompleted</td>
-                <td>dani</td>
-            </tr>
+            {{/each}}
         </tbody>
     </table>
 </body>

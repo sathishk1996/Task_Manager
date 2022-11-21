@@ -8,7 +8,7 @@ const TaskSchema = new mongoose.Schema({
     },
     status: {
         type: String,
-        enum:['Incomplete','Complete'],
+        enum:['Incomplete','complete'],
         default:'Incomplete'
     },
     owner_id: {

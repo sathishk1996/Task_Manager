@@ -6,7 +6,45 @@
         <link rel="stylesheet" href="/css/user.css">
     </head>
     <body>
-        <h1>User</h1>
+        <h1>{{title}}</h1>
+        {{#if showSubTitle}}
+          <h2>{{subTitle}}</h2>
+        {{/if}}
+        {{!-- <ul>
+        {{#each fruitArr}}
+        <li>{{this}}</li>
+        {{/each}}
+        </ul> --}}
+        {{!-- <table>
+            <thead>
+                <tr>
+                    <th>FruitName</th>
+                </tr>
+            </thead>
+            <tbody>
+                 {{#each fruitArr}}
+                   <tr>
+                     <td>{{this}}</td>
+                   </tr>
+                 {{/each}}
+            </tbody>
+        </table> --}}
+        {{!-- <table>
+            <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                    </tr>
+            </thead>
+            <tbody>
+                {{#each stdArr}}
+                <tr>
+                    <td>{{this.name}}</td>
+                    <td>{{this.age}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table> --}}
         <br>
         <div>
            <a href="/user">Users</a>
@@ -17,7 +55,7 @@
         <div id="divBtn">
         <button class="cornerBtn" id="addBtn">Add</button>
         <button class="cornerBtn" id="editBtn">Edit</button>
-        <button class="cornerBtn">Delete</button>
+        <button class="cornerBtn" id="deleteBtn">Delete</button>
         </div>
         <br>
         <table id="user">
@@ -30,24 +68,14 @@
                 </tr>
             </thead>
             <tbody>
+                {{#each userArr}}
                 <tr>
-                    <td><input type="checkbox"></td>
-                    <td>Arun</td>
-                    <td>abc@gmail.com</td>
-                    <td>271216</td>
+                    <td><input type="checkbox" id="{{this._id}}"></td>
+                    <td>{{this.name}}</td>
+                    <td>{{this.email}}</td>
+                    <td>{{this.password}}</td>
                 </tr>
-                 <tr>
-                     <td><input type="checkbox"></td>
-                    <td>Ram</td>
-                    <td>abc@gmail.com</td>
-                    <td>271216</td>
-                </tr>
-                 <tr>
-                     <td><input type="checkbox"></td>
-                    <td>dani</td>
-                    <td>abc@gmail.com</td>
-                    <td>271216</td>
-                </tr>
+                {{/each}}
             </tbody>
         </table>
     </body>
